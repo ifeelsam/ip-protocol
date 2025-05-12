@@ -16,6 +16,7 @@ pub mod ip_protocol {
     use super::*;
 
     pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
+        ctx.accounts.registry.authority
         Ok(())
     }
 }
