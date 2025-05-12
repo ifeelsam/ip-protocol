@@ -20,7 +20,7 @@ pub fn handler(
 
 #[derive(Accounts)]
 pub struct Initialize<'info> {
-    #[account(init, payer = authority, space = RegistryState::LEN)]
+    #[account(init, payer = authority, space = RegistryState::INIT_SPACE)]
     pub registry: Account<'info, RegistryState>,
     
     #[account(mut)]

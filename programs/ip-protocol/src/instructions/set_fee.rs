@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 use crate::state::RegistryState;
-use crate::ErrorCode;
+use crate::error::ErrorCode;
 
 pub fn handler(
     ctx: Context<SetRegistrationFee>,
