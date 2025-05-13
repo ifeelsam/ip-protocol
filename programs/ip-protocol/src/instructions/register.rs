@@ -14,7 +14,7 @@ pub struct Register<'info> {
         space = IPData::INIT_SPACE,
         seeds = [
             b"ip",
-            &(chain_id as u16).to_le_bytes(),
+            &chain_id.to_le_bytes()[..2],
             token_contract.as_ref(),
             &token_id.to_le_bytes()
         ],
